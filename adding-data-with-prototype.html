@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adding-data-with-prototype</title>
+</head>
+<body>
+    <h1>
+        adding-data-with-prototype
+    </h1>
+    <script>
+        // adding-data-with-prototype
+        var mobile=function(model_no,Price){
+            this.model=model_no;
+            this.price=Price;
+            this.detail=function(){
+                return(this.model+"<br>"+this.price+"<br>")
+            }
+        }
+        mobile.prototype.color="GREEN"
+        var samsung=new mobile("galaxyj5",89000)
+        var nokia=new mobile()
+
+        document.write(samsung.detail()+"<br>")
+        document.write(samsung.color)
+        document.write(nokia.color+"<br>")
+        
+        // accessing keys in new object with instance
+        //  variable and prototype variable 
+for (var i in samsung){
+    document.write(i+"<br>")
+}
+
+    </script>
+</body>
+</html>

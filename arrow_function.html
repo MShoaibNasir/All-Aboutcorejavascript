@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARROW FUNCTION CONCEPT</title>
+</head>
+<body>
+    <h1>ARROW FUNCTION CONCEPT</h1>
+    <script>
+        // arrow function without parameter
+        myfun=()=>{
+            document.write("SUNDAY IS FUNDAY")
+        };
+        myfun()
+                // arrow function with parameter
+                myfun=(a,b=79)=>{
+            document.write(a+b+"<br>")
+        };
+        myfun(5)
+
+        // arrrow function another syntex
+var mufun1=a=>a;
+
+document.write(mufun1(4 +"<br>"))
+
+// another method for two parameter
+var myfun3=(a,b)=> a-b;
+document.write(myfun3(9,8))
+
+
+// anonymous arrow function
+// (a,b)=>a+b;
+
+
+
+// special note:-
+// 1-var mufun1=a=>{a}; not Work
+// 2-var mufun1=a=>a; its Work
+// 3- var mufun1=a=>{ return a }; its Work
+    </script>
+</body>
+</html>

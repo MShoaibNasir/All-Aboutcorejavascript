@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doclass_with_parametercument</title>
+</head>
+<body>
+    <h1>class_with_parameter
+
+    </h1>
+    <script>
+        class mobile{
+            constructor(model_no,color){
+                this.model=model_no;
+                this.color=color;
+                this.detailed=function(){
+                    return("the model of the given product is:-"+this.model+"<br>"+"the color is:-"+this.color)
+                }
+            }
+        
+        }
+        var samsung=new mobile("galaxy","red");
+        document.write(samsung.detailed());
+        
+    </script>
+</body>
+</html>

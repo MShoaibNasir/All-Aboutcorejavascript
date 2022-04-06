@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INHERITANCE CONCEPT</title>
+</head>
+<body>
+    <h1>
+        INHERITANCE CONCEPT
+    </h1>
+    <script>
+        // isss program ko complete karna ha
+        var mobile=function(modle_no){
+          this.model=model_no;
+        }
+        mobile.prototype.getmodel=function(){
+            return this.model
+        }
+
+
+        // inheritance another concept:- mobile.call(this,model)
+
+
+        var samsung=function(price,model_no){
+this.price=price;
+mobile.call(this,model)
+        }    
+    samsung.prototype=Object.create(mobile.prototype);
+    samsung.prototype.constructor=mobile.prototype;    
+var galaxy=new samsung(90000,"galaxy")
+document.write(galaxy.getmodel())
+
+    
+    </script>
+</body>
+</html>

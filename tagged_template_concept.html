@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tagged template concept</title>
+</head>
+<body>
+    <h1>Tagged template concept</h1>
+    <script>
+        // tagged tempalte concept
+
+
+// there are 5 movie tickets and each rs 200  and if you 5 tickets
+// then  get discount rs 50 on each
+
+
+
+// there are 5 movie tickets and each rs 200  and if you buy 
+// less than tickets then  get discount rs 0 on each
+
+
+
+
+
+
+var nooftickets=5;
+var priceoftickets=200;
+var buytickets=5;
+var discountprice=50;
+function tickets(detail,nooft,pof,bt,disc){
+if (bt<5){
+return (`${detail[0]} ${nooft} ${detail[1]} ${pof} ${detail[1]} ${bt} ${detail[2]}  ${disc}`)
+} 
+}
+
+document.write(tickets`there are ${nooftickets} movie tickets and each rs ${priceoftickets} if you buy less than ${buytickets}
+then get discount ${discountprice} on each `);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMAT DATE METHOD</title>
+</head>
+<body>
+    <h1>FORMAT DATE METHOD</h1>
+    <script>
+        var tarikh=new Date();
+        function formatdate(){
+            var date=tarikh.getDate();
+            var month=tarikh.getMonth();
+            month++;
+            var year=tarikh.getFullYear();
+            return "today date is:-"+date+"-"+month+"-"+year;
+        }
+        document.write(formatdate());
+    
+
+
+    </script>
+    
+</body>
+</html>

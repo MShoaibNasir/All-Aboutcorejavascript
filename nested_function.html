@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>NESTED FUNCTION</h1>
+    <script>
+        function outer(){
+            var x="x is outer function"
+            document.write(x+"<br>")
+            function inner(){
+                var d="d is inner function"
+                document.write(d+"<br>")
+                document.write(x+"<br>")
+            }
+            inner()
+        }
+        outer()
+    
+    </script>
+</body>
+</html>

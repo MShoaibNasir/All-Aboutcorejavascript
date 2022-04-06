@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>factory_function_with_parameter</title>
+</head>
+
+<body>
+    <h1>factory_function_with_parameter</h1>
+    <script>
+        // when a function return object 
+        // this is called factory function
+        var mobile = (naaam, jamat) => {
+            return {
+                name: naaam,
+                class: jamat
+            }
+
+        }
+        var samsung =mobile("samsung galaxy j5", "14th")
+        document.write(samsung.name + "<br>")
+        document.write(samsung.class + "<br>")
+        // -------------another code---------------
+        var mob = (model, color, price) => {
+            return {
+                model_no: model,
+                color_name: color,
+                about_price: price,
+                specification: () => {
+                    document.write("the model of the given mobile is:-" + model + "<br>");
+                    document.write("the color of the given mobile is:-" + color + "<br>");
+                    document.write("the price of the given mobile is:-" + price + "<br>");
+                }
+
+            }
+        }
+var nokia=mob(3336,"black",80000)
+nokia.specification()
+
+
+    </script>
+</body>
+
+</html>

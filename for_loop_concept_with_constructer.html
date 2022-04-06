@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for_loop_concept_with_constructer</title>
+</head>
+<body>
+    <h1>for_loop_concept_with_constructer</h1>
+    <script>
+        function mobile(model_no,price,color_name){
+            this.model=model_no,
+            this.price=price,
+            this.color=color_name,
+            this.detail=document.write(this.model+"<br>"+this.price),
+            this.v=function (){
+                document.write("the color is:-",this.color)
+            }
+        }
+    
+    // for loop :- 
+       var samsung=new mobile("samsung galaxy j5",10000,"red")
+for(var shoaib in samsung){
+    if(typeof samsung[shoaib]!=='function'){
+    document.write(shoaib+" "+samsung[shoaib]+"<br>")
+}
+}
+
+// accessing the keys in constructer
+document.write(Object.keys(samsung))
+document.write("<br>");
+document.write(shoaib)
+    </script>
+</body>
+</html>

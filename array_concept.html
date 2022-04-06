@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY CONCEPT</title>
+</head>
+
+<body>
+    <h1>
+        ARRAY CONCEPT IN JAVA SCRIPT
+    </h1>
+    <script>
+        // arry must be start with zero index
+        var stu = ["shoaib", "talha", "maehmood"]
+
+        // you also modify the array into another variable like:-
+        var studentname = stu;
+
+        //    and then you also change array lenght with
+        //  the new name like:-
+        studentname[5] = "karachi"
+
+        stu[3] = "nasir";
+        stu[4] = "yusof";
+
+        document.write(stu + "<br>")
+        document.write(typeof (stu));
+        document.write(studentname + "<br>")
+
+
+        // you can also delete array number with index like:-
+        // but after deleting array length cannot be change
+        //  because is can't be deleted its just undefined
+        delete studentname[4]
+        document.write(stu)
+        document.write("<br>")
+        // how to find lenght  of array
+        document.write(studentname.length);
+        document.write("<br>");
+
+        // for loop for array :-
+
+        // lakin ager array me property  countless howi tu ap phele array ka
+        //  lenght nikalo phr usko condition k liye use karo
+        //   for example:-
+ var s=[1,2,3,4,5,6,7,8]
+ 
+//  document.write(lol+"<br>")
+ document.write(s +"<br>")
+ for (let m=0; m<s.length; m++){
+     document.write(s[s.length])
+ }
+    </script>
+</body>
+
+</html>

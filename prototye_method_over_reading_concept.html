@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototye_method_over_reading_concept</title>
+</head>
+<body>
+    <h1>prototye_method_over_reading_concept</h1>
+    <script>
+        // function for inheritance
+        function inheritance(child,parent){
+        child.prototype=Object.create(parent.prototype);
+        child.prototype.constructor=child;
+        }
+
+
+// super class
+var mobile=function(){
+
+}
+mobile.prototype.data=function(){
+    return("I AM SUPER CLASS")
+}
+// child class
+var samsung=function(){
+
+}
+inheritance(samsung,mobile)
+samsung.prototype.data=function(){
+    return("I AM CHILD CLASS")
+}
+var s=new samsung();
+var m=new mobile();
+document.write(s.data()+"<br>");
+document.write(m.data()+"<br>");
+
+
+    </script>
+</body>
+</html>

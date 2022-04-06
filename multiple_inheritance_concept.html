@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiple_inheritance_concept</title>
+</head>
+<body>
+    <h1>multiple_inheritance_concept</h1>
+    <script>
+        // inheritance code with function
+        function inheritance(child,parent){
+            child.prototype=Object.create(parent.prototype);
+            child.prototype.constructor=child;
+        }
+        // super class
+        var mobile=function(){
+            this.a=10;
+        }
+        mobile.prototype.x=100;
+
+
+// upper class
+
+        var samsung=function(){
+            this.b=20;
+            mobile.call(this)
+        }
+        inheritance(samsung,mobile)
+        samsung.prototype.y=200;
+        
+
+
+        
+// child class
+
+var galaxy=function(){
+            this.c=30;
+            samsung.call(this)
+        }
+        inheritance(galaxy,samsung)
+        galaxy.prototype.z=300;
+        
+        
+
+
+        // now i will create object for each class
+var m=new mobile();
+var s=new samsung();
+var g=new galaxy();
+// now the varible access galaxy with mobile
+document.write("THIS DATA EXCESS WITH GALAXY (WHICH IS CHILD CLASS):-"+"<br>");
+document.write(g.a+"<br>");
+document.write(g.x+"<br>");
+document.write(g.b+"<br>");
+document.write(g.y+"<br>");
+document.write(g.c+"<br>");
+document.write(g.z+"<br>");
+
+
+
+
+
+
+
+
+
+
+
+// now the varible access galaxy with mobile
+document.write("THIS DATA EXCESS WITH SAMSUNG (WHICH IS UPPER CLASS):-"+"<br>");
+document.write(s.a+"<br>");
+document.write(s.x+"<br>");
+document.write(s.b+"<br>");
+document.write(s.y+"<br>");
+// document.write(s.c+"<br>");
+// document.write(s.z+"<br>");
+
+
+
+
+
+// now the varible access galaxy with mobile
+document.write("THIS DATA EXCESS WITH MOBILE (WHICH IS SUPER CLASS):-"+"<br>");
+document.write(s.a+"<br>");
+document.write(s.x+"<br>");
+// document.write(s.b+"<br>");
+// document.write(s.y+"<br>");
+// document.write(s.c+"<br>");
+// document.write(s.z+"<br>");
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

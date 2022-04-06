@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET MONTHNAME DAY NAME</title>
+</head>
+<body>
+    <script>
+        var tarikh=new Date();
+        var month=tarikh.getMonth();
+        var day=tarikh.getDay();
+
+// for month:-
+
+        function getmonthname(monthnumber){
+Monthname=["jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"];
+return Monthname[monthnumber];
+        }
+        document.write(getmonthname(month)+"<br>");
+        // this month give the number to the monthnumber
+
+
+        
+// for day name:-
+function getdayname(daynumber){
+    dayName=["mon","tue","wed","thur","fri","sat","sun"];
+    return dayName[daynumber];
+}
+
+document.write(getdayname(day));
+// this day give the number to the daynumber
+
+    </script>
+</body>
+</html>

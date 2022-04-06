@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONSTRUCTER CONCEPT</title>
+</head>
+
+<body>
+    <h1>CONSTRUCTER CONCEPT</h1>
+    <script>
+        // in CONSTRUCTER this is used for new
+        //  instance virable 
+        // constructer without parameter
+        function mobile() {
+            this.model = "samsung galaxy j5",
+                this.price = "45000",
+                this.detail = document.write("the model is:-" + this.model + "<br>" + "the price is:-" + this.price)
+        }
+
+
+        var samsung = new mobile()
+        samsung.detail
+
+document.write("<br>");
+
+
+
+        // constructer with parameter
+function phone(model_no,rate){
+    this.cheez=model_no,
+    this.rate=rate,
+    this.full=function(){
+        document.write("the model of the given product is:-",model_no+"<br>")
+        document.write("the model of the given product is:-",rate+"<br>")
+    }
+}
+
+var lg=new phone("LG KG95",50000)
+lg.full()
+// checking the variable or property exit in program
+//  or not
+if(typeof lg.full!=='undefined'){
+    document.write("YES IT IS AVAILABLE")
+}else {
+    document.write("NOT AVAILABLE")
+}
+
+
+// second method: checking the variable or property 
+// exit in program or not
+if ('full' in lg){
+    document.write("YES IT IS AVAILABLE")
+}
+else{
+    document.write("NO IT IS NOT AVAILABLE")
+}
+
+
+
+    </script>
+</body>
+
+</html>

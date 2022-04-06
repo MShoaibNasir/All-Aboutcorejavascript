@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATE CONCEPT</title>
+</head>
+<body>
+    <h1>DATE CONCEPT</h1>
+    <script>
+        // in this concept days and month start with 0
+        // january-0.
+        // sunday-0
+        
+        var tarikh=new Date();
+        document.write(tarikh+"<br>");
+        // -----------------------------------
+        // now craete millisecond date concept
+        var m=new Date(676784786);
+        document.write(m+"<br>");
+
+        // now the next method is
+        // (year,month,date,hour,minutes,seconds,milliseconds);
+        // (year,month,date,hour,minutes,seconds);
+        // (year,month,date,hour,minutes);
+        // (year,month,date,hour;
+        // (year,month,date);
+        // (year,month);
+        // (milliseconds);
+        var s=new Date(2019,2,5,45,32);
+        document.write(s+"<br>");
+
+        var s1=new Date(2019,2,5,45,);
+        document.write(s1+"<br>");
+
+        var s2=new Date(2019,2,5);
+        document.write(s2+"<br>");
+
+        var s3=new Date(2019,2);
+        document.write(s3+"<br>");
+
+        var s4=new Date(6885859685);
+        document.write(s4+"<br>");
+// next method  of creating date
+
+// "in this concpet day and month does not start with 0"
+// january-0
+// sunday-0
+
+        var g=new Date("2020,4,06");
+        document.write(g+"<br>");
+
+
+
+
+// next method  of creating date
+var t=new Date("march,09,2021");
+document.write(t+"<br>");
+
+
+
+        
+
+    </script>
+    
+</body>
+</html>

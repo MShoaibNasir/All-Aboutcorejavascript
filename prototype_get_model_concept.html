@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype_get_model_concept</title>
+</head>
+<body>
+    <h1>prototype_get_model_concept</h1>
+    <script>
+        // as we want that our code must be
+        //  looking professional so we make 
+        // a function of inhritance
+        // as the code of prototype inheritance is:-
+        // child.prototype=Object.create(parent.prototype);
+        // child.prototype.constructor=child;
+
+
+
+// inheritance function:-
+
+var inhritance=function(child,parent){
+    child.prototype=Object.create(parent.prototype);
+        child.prototype.constructor=child;
+}
+
+
+
+        // parent class
+        var mobile=function(){
+
+        }
+        mobile.prototype.getmodel=function(){
+            return this.model
+        }
+        // sub class 1
+        var samsung=function(model,price){
+this.model=model;
+this.price=price;
+        }
+
+
+        // sub class 2:-
+        var lenovo=function(model){
+            this.model=model;
+        }
+
+
+inhritance(samsung,mobile);
+inhritance(lenovo,mobile);
+
+        // // inhritance code for samsung
+        // samsung.prototype=Object.create(mobile.prototype);
+        // samsung.prototype.constructor=mobile;
+        // // inhritance code for lenovo
+        // lenovo.prototype=Object.create(mobile.prototype);
+        // lenovo.prototype.constructor=mobile;
+
+
+        var galaxy=new samsung("galaxyj5",90000)
+        document.write(galaxy.getmodel()+"<br>")
+    var l=new lenovo("lenovo X");
+    document.write(l.getmodel())
+
+    </script>
+</body>
+</html>

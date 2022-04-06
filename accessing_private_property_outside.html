@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accessing_private_property_outside</title>
+</head>
+
+<body>
+    <h1>accessing_private_property_outside</h1>
+    <script>
+        // accessing personal data from inside to outside
+        var mobile = function (model_no, color_name) {
+            this.model = model_no;
+            this.color = color_name;
+            // private memeber
+            var purchasingprice = 60000;
+            this.detailed = function () {
+                return ("the model_no of the product is:-" + this.model + "<br>" + "the color of the given product is:-" + this.color)
+            };
+            this.personal = function () {
+                return ("THE PURCHASING PRICE OF THIS PRODUCT IS:-" + purchasingprice)
+            };
+
+        }
+        var samsung = new mobile("galaxyj5", "red")
+        document.write(samsung.detailed() + "<br>")
+
+        document.write(samsung.personal()+"<br>")
+        // this private memeber cannot access because this
+        //  is private
+        // document.write(samsung.purchasingprice);
+    </script>
+</body>
+
+</html>

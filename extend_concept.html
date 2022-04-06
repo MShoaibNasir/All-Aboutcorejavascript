@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extend_concept</title>
+    <style>
+        body{
+            background-color: cadetblue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Extend_concept</h1>
+    <script>
+        // inhertitance code with function
+        var inheritance=function(child,parent){
+            child.prototype=Object.create(parent.prototype);
+            child.prototype.constructor=child;
+        }
+
+
+
+        // Extend_concept
+        var father=function (){
+             this.model="this is father wealth <br>";
+        }
+        father.prototype.color="red";
+
+        var son=function (){
+        this.model_no="this is son wealth <br>";
+        father.call(this)
+
+        }
+        inheritance(son,father);
+
+        var s=new son();
+        document.write(s.model)
+        document.write(s.color)
+
+
+
+    </script>
+</body>
+</html>

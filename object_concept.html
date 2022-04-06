@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBJECT CONCEPT</title>
+</head>
+<body>
+    <h1>OBJECT CONCEPT</h1>
+    <script>
+        var person=new Object()// equal to var person=[];
+        var N=person.name="muhammad shoaib nasir";
+        var Q=person.quilificaion="FSC";
+        var f=person.fun=()=>{document.write(person.name+"<br>"+person.quilificaion+"<br>")}
+    
+        document.write(N+"<br>")
+        document.write(Q+"<br>")
+        f()
+
+
+        // adding the object from any line code
+
+        person.age=22
+        person.fun2=(a,b)=>{document.write(a+b)}
+        console.log(person)
+
+        person.fun2(80,90)
+
+        // delete the property of the object
+        delete person.age
+        console.log(person)
+
+    </script>
+</body>
+</html>

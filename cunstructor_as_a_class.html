@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cunstructor_as_a_class</title>
+</head>
+<body>
+    <h1>cunstructor_as_a_class</h1>
+    <script>
+        var mobile=function(model_no,sprice_value){
+            this.model=model_no;
+            this.price=60000;
+            this.color="black";
+            this.sprice=sprice_value;
+            this.detailed=function(){
+                return(this.model+"<br>"+this.color)
+            };
+            this.data=function(){
+                return("the price of the product is:-",this.price+this.sprice+"<br>"+this.detailed())
+            }
+        }
+        var samsung=new mobile("galaxyj5",90000)
+        var nokia=new mobile("3567",10000)
+        document.write(samsung.data())
+        document.write("<br>")
+        document.write(nokia.data())
+        
+
+    </script>
+</body>
+</html>
